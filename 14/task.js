@@ -1,4 +1,3 @@
-let fs = require('fs');
 let _ = require('lodash');
 
 let hash = (data) => {
@@ -27,11 +26,11 @@ let hash = (data) => {
                 cur += (skip + len) % list.length;    
                 skip++;
             });
-        }
+        };
         
         _.times(rotations, rotate);
         return list;
-    }
+    };
 
     data = data.slice();
     data.push(17, 31, 73, 47, 23);
@@ -48,11 +47,11 @@ let hash = (data) => {
     );
 
     return result;
-}
+};
 
 let input = 'ljoxqyyw';
 
-matrix = Array(128).fill();
+let matrix = Array(128).fill();
 
 let rows = _.range(0, 128).map((r) => `${input}-${r}`);
 let result = _.sum(_.map(rows, (row, ri) => {
@@ -91,7 +90,7 @@ let paint = function(x, y, num) {
         paint(x, y + 1, num);
         
     return true;
-}
+};
 
 let regions = 0;
 for (let i = 0; i < matrix.length; i++) {

@@ -29,11 +29,11 @@ let scramble = (data, rotations = 1) => {
             cur += (skip + len) % list.length;    
             skip++;
         });
-    }
+    };
     
     _.times(rotations, rotate);
     return list;
-}
+};
 
 let data1 = input.trim().split(',').map(num => Number(num));
 let result1 = scramble(data1);
@@ -56,7 +56,7 @@ let hash = (data) => {
     );
 
     return result;
- }
+};
 
 let data2 = input.trim().split('').map(num => num.charCodeAt(0));
 console.log(`Part 2: ${hash(data2)}`); // a9d0e68649d0174c8756a59ba21d4dc6

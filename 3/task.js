@@ -25,7 +25,7 @@ let input = 325489;
             return {
                 x,
                 y: y - (input - pos)
-            }
+            };
         }
     
         if (pos + side + 1 < input) {
@@ -36,7 +36,7 @@ let input = 325489;
             return {
                 x: x - (input - pos),
                 y
-            }
+            };
         }
     
         if (pos + side + 1 < input) {
@@ -47,15 +47,15 @@ let input = 325489;
             return {
                 x,
                 y: y + (input - pos)
-            }
+            };
         }
     
         // going right on the bottom edge
         return {
             x: x + (input - pos),
             y
-        }
-    }
+        };
+    };
     
     let coords = findCoords();
     let result = Math.abs(Math.round(coords.x)) + Math.abs(Math.round(coords.y));
@@ -85,7 +85,7 @@ let input = 325489;
             console.log(`Part 2: ${arr[x][y]}`); // 330785
             process.exit(0);
         }
-    }
+    };
 
     let go = function(diff, steps = 1) {
         _.times(steps, () => {
@@ -94,7 +94,7 @@ let input = 325489;
 
             calcXY();
         });
-    }
+    };
     
     let up = {
         x: 0,

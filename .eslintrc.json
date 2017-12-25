@@ -25,6 +25,7 @@
             "always"
         ],
         "no-console": "off",
-        "no-constant-condition": "off"
+        "no-constant-condition": "off",
+        "no-unused-vars": ["error", { "argsIgnorePattern": "^_.+" }]
     }
 }

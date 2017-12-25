@@ -1,5 +1,4 @@
 let fs = require('fs');
-let _ = require('lodash');
 
 let data = fs.readFileSync('input.txt', 'utf8').trim().split(',');
 

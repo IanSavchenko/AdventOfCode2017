@@ -4,7 +4,7 @@ let _ = require('lodash');
 let data = fs.readFileSync('./input.txt', 'utf8').trim();
 
 let layers = [];
-_.forEach(data.trim().split('\n'), function(row, i) {
+_.forEach(data.trim().split('\n'), function(row) {
     row = row.split(':');
     layers[+row[0]] = +row[1];
 });

@@ -18,7 +18,7 @@ let towers = data.split('\n').map(function(towerLine) {
 let bottom;
 for (let i = 0; i < towers.length; i++) {
     let isChild = false;
-    for (j = 0; j < towers.length; j++) {
+    for (let j = 0; j < towers.length; j++) {
         if (_.includes(towers[j].children, towers[i].name)) {
             isChild = true;
         }
@@ -43,7 +43,7 @@ let getWeight = function(tower) {
     }
     
     return tower.totalWeight;
-}
+};
 
 let allUnbalanced = [];
 _.forEach(towers, function(tower) {

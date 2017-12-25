@@ -4,7 +4,7 @@ let _ = require('lodash');
 let data = fs.readFileSync('./input.txt', 'utf8').trim();
 let rows = data.split('\n');
 
-let matrix = Array(rows.length).fill().map(row => []);
+let matrix = Array(rows.length).fill().map(_row => []);
 for (let row of rows) {
     let nums = row.trim().split(' ');
 
@@ -29,7 +29,7 @@ let connect = function(row, group) {
         group.add(peer);
         connect(matrix[peer], group);
     });
-}
+};
 
 let groups = [];
 for (let i = 0; i < matrix.length; i++) {
